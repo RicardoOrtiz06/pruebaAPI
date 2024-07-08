@@ -41,16 +41,20 @@ public class UserControllers {
         return this.userService.saveUser(user);
     }
     
-    @GetMapping(path = "/{id}")
-    public Optional<UserModel> getUserById(@PathVariable("id") Long id){
-        return this.userService.getById(id);
-    }
-    
-    
-    @PutMapping(path = "/{id}")
-    public UserModel updateUserById(@RequestBody UserModel request, Long id){ 
-        return this.userService.updateById(request, id);
-       
-    }
-    
+
+    /* 
+     * 
+     @GetMapping(path = "/{id}")
+     public Optional<UserModel> getUserById(@PathVariable("id") Long id){
+         return this.userService.getById(id);
+        }
+        
+        
+        @PutMapping(path = "/{id}")
+        public UserModel updateUserById(@RequestBody UserModel request, Long id){ 
+            return this.userService.updateById(request, id);
+            
+        }
+        
+        */
 }

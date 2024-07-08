@@ -7,16 +7,10 @@ package com.api.crud.services;
 import com.api.crud.models.UserModel;
 import com.api.crud.repositories.IUserRepository;
 import java.util.ArrayList;
-import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.stereotype.Service;
 
-/**
- *
- * @author ricar
- */
+@Service
 public class UserServices {
  
     @Autowired
@@ -31,6 +25,12 @@ public class UserServices {
     public UserModel saveUser(UserModel user){
             return  userRepository.save(user);
     }
+
+
+
+
+
+    /* 
     
     public Optional<UserModel> getById(Long id){
     
@@ -42,13 +42,13 @@ public class UserServices {
             
         UserModel user = userRepository.findById(id).get();
         
-        user.setFirstName(request.getFirstName());
-        user.setLastName(request.getLastName());
-        user.setEmail(request.getEmail());
+        user.setUserName(request.getUserName());
+        user.setUserPassword(request.getUserPassword());
+        user.setUserType(request.getUserType());
         
         return user;
                 
     }
- 
+ */
     
 }
